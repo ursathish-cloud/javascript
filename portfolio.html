@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Online portfolio of Sathishkumar K S – web developer and problem solver.">
+  <title>Sathishkumar K S – Portfolio</title>
+  <style>
+    :root {
+      --bg-light: #f4f4f4;
+      --bg-dark: #1a1a1a;
+      --text-light: #333;
+      --text-dark: #fff;
+      --accent: #333;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: var(--bg-light);
+      color: var(--text-light);
+      transition: background 0.3s, color 0.3s;
+    }
+    body.dark {
+      background: var(--bg-dark);
+      color: var(--text-dark);
+    }
+
+    header, footer {
+      background: var(--accent);
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    nav a {
+      margin: 0 15px;
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    section {
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+    h2 { color: #444; }
+    .project {
+      background: #fff;
+      margin: 20px 0;
+      padding: 15px;
+      border-left: 5px solid var(--accent);
+    }
+    form input, form textarea {
+      width: 100%;
+      padding: 8px;
+      margin: 10px 0;
+      box-sizing: border-box;
+    }
+    button {
+      background: var(--accent);
+      color: #fff;
+      border: none;
+      padding: 10px 15px;
+      cursor: pointer;
+    }
+    button:hover { opacity: 0.9; }
+    #themeBtn { margin-top: 10px; }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Sathishkumar K S</h1>
+    <p>Web Developer | Problem Solver</p>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>
+      I’m a web developer with a passion for building beautiful, functional
+      products. I work with HTML, CSS, JavaScript, Python, and Java to create
+      clean solutions to real-world problems.
+    </p>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="project">
+      
+    </div>
+    <div class="project">
+      <h3></h3>
+      <p></p>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <form onsubmit="return validateForm()">
+      <label>
+        Name
+        <input type="text" id="name" placeholder="Your Name" required>
+      </label>
+      <label>
+        Email
+        <input type="email" id="email" placeholder="Your Email" required>
+      </label>
+      <label>
+        Message
+        <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
+      </label>
+      <button type="submit">Send</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Sathishkumar K S | All rights reserved.</p>
+  </footer>
+   <script>
+    // Theme toggle
+    const btn = document.getElementById('themeBtn');
+    btn.addEventListener('click', () => {
+      document.body.classList.toggle('dark');
+    });
+
+    // Simple form validation
+    function validateForm() {
+      const name    = document.getElementById('name').value.trim();
+      const email   = document.getElementById('email').value.trim();
+      const message = document.getElementById('message').value.trim();
+
+      if (!name || !email || !message) {
+        alert('Please fill in all fields.');
+        return false;
+      }
+      alert('Message sent successfully!');
+      return true;
+    }
+  </script>
+</body>
+</html>
