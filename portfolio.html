@@ -44,7 +44,13 @@
       margin: auto;
     }
     h2 { color: #444; }
-    .project {
+    .dark .project {
+      background-color: #333;
+      color: #fff;
+      margin: 20px 0;
+      padding: 15px;
+      border-left: 5px solid var(--accent);}
+    .project{
       background: #fff;
       margin: 20px 0;
       padding: 15px;
@@ -71,12 +77,13 @@
 <body>
   <header>
     <h1>Sathishkumar K S</h1>
-    <p>Web Developer | Problem Solver</p>
+    <p>Web Developer&nbsp;| Problem Solver</p>
     <nav>
       <a href="#about">About</a>
       <a href="#projects">Projects</a>
       <a href="#contact">Contact</a>
     </nav>
+    <button id="themeBtn" aria-label="Toggle dark mode">Toggle Theme</button>
   </header>
 
   <section id="about">
@@ -91,11 +98,12 @@
   <section id="projects">
     <h2>Projects</h2>
     <div class="project">
-      
+      <h3>Portfolio Website</h3>
+      <p>A personal portfolio built with HTML5, CSS 3, and vanilla JavaScript.</p>
     </div>
     <div class="project">
-      <h3></h3>
-      <p></p>
+      <h3>To-Do App</h3>
+      <p>A simple to-do list web app for efficient task management.</p>
     </div>
   </section>
 
@@ -121,7 +129,8 @@
   <footer>
     <p>&copy; 2025 Sathishkumar K S | All rights reserved.</p>
   </footer>
-   <script>
+
+  <script>
     // Theme toggle
     const btn = document.getElementById('themeBtn');
     btn.addEventListener('click', () => {
